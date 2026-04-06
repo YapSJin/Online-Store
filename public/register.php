@@ -102,7 +102,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ':phone' => $phone_num
         ]);
 
-        header("Location: login.php");
+        if ($is_admin_form) {
+            header("Location: /admin/manageUser.php");
+        } else {
+            header("Location: login.php");
+        }
         exit;
     }
 }

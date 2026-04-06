@@ -62,6 +62,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <b>📄 Manage Orders</b>
                 </a>
             </div>
+            <div class="add-user">
+                <a href="manageDiscount.php" class="btn-create-user" style="background:#111;">
+                    <b>🏷️ Manage Discount Codes</b>
+                </a>
+            </div>
 
             <form method="GET" class="search-form">
                 <input type="hidden" name="role" value="<?= htmlspecialchars($roles) ?>">

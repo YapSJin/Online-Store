@@ -1,6 +1,10 @@
--- Drop existing tables to avoid conflicts
-DROP TABLE IF EXISTS `order_items`;
-DROP TABLE IF EXISTS `orders`;
+-- Create Discount Codes Table
+CREATE TABLE `discount_codes` (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    code VARCHAR(50) NOT NULL UNIQUE,
+    discount_amount DECIMAL(10, 2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
 
 -- Create Orders Table
 CREATE TABLE `orders` (
@@ -15,9 +19,17 @@ CREATE TABLE `orders` (
     postcode VARCHAR(10) NOT NULL,
     subtotal DECIMAL(10, 2) NOT NULL,
     tax DECIMAL(10, 2) NOT NULL,
+    discount_amount DECIMAL(10, 2) DEFAULT 0.00,
     total_amount DECIMAL(10, 2) NOT NULL,
     status VARCHAR(50) DEFAULT 'Pending'
 ) ENGINE=InnoDB;
+
+-- Sample Discount Codes
+INSERT INTO `discount_codes` (code, discount_amount)
+VALUES 
+('DISCOUNT10', 10.00),
+('SAVE5', 5.00),
+('NEWUSER20', 20.00);
 
 -- Create Order Items Table
 CREATE TABLE `order_items` (
@@ -32,10 +44,10 @@ CREATE TABLE `order_items` (
 ) ENGINE=InnoDB;
 
 -- Sample Orders for a single user
-INSERT INTO `orders` (customer_name, email, phone, address, city, state, postcode, subtotal, tax, total_amount, status)
+INSERT INTO `orders` (customer_name, email, phone, address, city, state, postcode, subtotal, tax, discount_amount, total_amount, status)
 VALUES 
-('User', 'alex@example.com', '012-3456789', '123, Jalan Bukit Bintang', 'Kuala Lumpur', 'W.P. Kuala Lumpur', '55100', 850.00, 51.00, 901.00, 'Delivered'),
-('User', 'alex@example.com', '019-8765432', '456, Jalan Peel', 'George Town', 'Penang', '10350', 1300.00, 78.00, 1378.00, 'Processing');
+('User', 'alex@example.com', '012-3456789', '123, Jalan Bukit Bintang', 'Kuala Lumpur', 'W.P. Kuala Lumpur', '55100', 850.00, 51.00, 0.00, 901.00, 'Delivered'),
+('User', 'alex@example.com', '019-8765432', '456, Jalan Peel', 'George Town', 'Penang', '10350', 1300.00, 78.00, 0.00, 1378.00, 'Processing');
 
 INSERT INTO `order_items` (order_id, product_id, product_name, price, quantity, subtotal)
 VALUES 

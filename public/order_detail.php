@@ -70,7 +70,12 @@ include 'header.php';
 
     <div style="margin-top: 20px; background:#f8f9fa; padding: 15px; border-radius: 8px;">
         <div style="display:flex; justify-content:space-between; margin:6px 0;"><span>Subtotal</span><span>RM <?= number_format((float)$order['subtotal'], 2) ?></span></div>
-        <div style="display:flex; justify-content:space-between; margin:6px 0;"><span>Tax</span><span>RM <?= number_format((float)$order['tax'], 2) ?></span></div>
+        <?php if ((float)$order['tax'] > 0): ?>
+            <div style="display:flex; justify-content:space-between; margin:6px 0;"><span>Tax</span><span>RM <?= number_format((float)$order['tax'], 2) ?></span></div>
+        <?php endif; ?>
+        <?php if (isset($order['discount_amount']) && (float)$order['discount_amount'] > 0): ?>
+            <div style="display:flex; justify-content:space-between; margin:6px 0; color: #dc3545;"><span>Discount</span><span>- RM <?= number_format((float)$order['discount_amount'], 2) ?></span></div>
+        <?php endif; ?>
         <div style="display:flex; justify-content:space-between; margin:6px 0; font-weight:700;"><span>Total</span><span>RM <?= number_format((float)$order['total_amount'], 2) ?></span></div>
     </div>
 

@@ -164,7 +164,12 @@ $reg_date = isset($member['created_at']) ? date('Y-m-d', strtotime($member['crea
 
                         <div style="margin-top: 12px; background:#f8f9fa; padding: 12px; border-radius: 8px;">
                             <div style="display:flex; justify-content:space-between; margin:6px 0;"><span>Subtotal</span><span>RM <?php echo number_format((float)($o['subtotal'] ?? 0), 2); ?></span></div>
-                            <div style="display:flex; justify-content:space-between; margin:6px 0;"><span>Tax</span><span>RM <?php echo number_format((float)($o['tax'] ?? 0), 2); ?></span></div>
+                            <?php if ((float)($o['tax'] ?? 0) > 0): ?>
+                                <div style="display:flex; justify-content:space-between; margin:6px 0;"><span>Tax</span><span>RM <?php echo number_format((float)($o['tax'] ?? 0), 2); ?></span></div>
+                            <?php endif; ?>
+                            <?php if (isset($o['discount_amount']) && (float)$o['discount_amount'] > 0): ?>
+                                <div style="display:flex; justify-content:space-between; margin:6px 0; color: #dc3545;"><span>Discount</span><span>- RM <?php echo number_format((float)$o['discount_amount'], 2); ?></span></div>
+                            <?php endif; ?>
                             <div style="display:flex; justify-content:space-between; margin:6px 0; font-weight:800;"><span>Total</span><span>RM <?php echo number_format((float)($o['total_amount'] ?? ($o['total'] ?? ($o['grand_total'] ?? 0))), 2); ?></span></div>
                         </div>
                     </div>

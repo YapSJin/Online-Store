@@ -290,6 +290,25 @@ ALTER TABLE `members`
 
 -- --------------------------------------------------------
 --
+-- Table structure for table `discount_codes`
+--
+
+CREATE TABLE `discount_codes` (
+  `id` int(11) NOT NULL,
+  `code` varchar(50) NOT NULL,
+  `discount_amount` decimal(10,2) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+ALTER TABLE `discount_codes`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `code` (`code`);
+
+ALTER TABLE `discount_codes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+-- --------------------------------------------------------
+--
 -- Table structure for table `orders`
 --
 

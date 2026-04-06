@@ -38,8 +38,7 @@ if (!empty($cart)) {
 }
 
 $subtotal = cart_total();
-$tax = $subtotal * 0.06;
-$grandTotal = $subtotal + $tax;
+$grandTotal = $subtotal;
 
 include 'header.php';
 ?>
@@ -105,8 +104,6 @@ include 'header.php';
         </table>
 
         <div style="margin-top: 20px; background:#f8f9fa; padding: 15px; border-radius: 8px;">
-            <div style="display:flex; justify-content:space-between; margin:8px 0;"><span>Subtotal</span><span>RM <?= number_format($subtotal, 2) ?></span></div>
-            <div style="display:flex; justify-content:space-between; margin:8px 0;"><span>Tax (6%)</span><span>RM <?= number_format($tax, 2) ?></span></div>
             <div style="display:flex; justify-content:space-between; margin:8px 0; font-weight:700;"><span>Total</span><span>RM <?= number_format($grandTotal, 2) ?></span></div>
         </div>
 
