@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.profile-container {
+    text-align: center;
+    /* Centering the title */
+    background: rgb(250, 250, 250);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+    margin-top: 2.5cm;
+    margin-left: 14.5cm;
+}
+
+.profile-pic {
+    width: 150px;
+    /* 设置头像的宽度 */
+    height: 150px;
+    /* 设置头像的高度 */
+    border-radius: 50%;
+    /* 将头像设置为圆形 */
+    border: 1px solid #686868;
+    /* 设置边框样式和颜色 */
+    object-fit: cover;
+    /* 让头像保持比例并填满容器 */
+    margin-bottom: 20px;
+    /* 设置头像与其他内容的间距 */
+}
+
+.profile-card .profile-img {
+    width: 100px;
+    height: 100px;
+}
+
+
+.profile-info {
+    width: 100%;
+    /* Ensure profile info takes up the whole width */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    /* Center the info block */
+}
+
+.info-item {
+    font-size: 16px;
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    column-gap: 10px;
+    row-gap: 8px;
+    align-items: start;
+    justify-items: start;
+    text-align: left;
+    /* Align text left */
+    width: 100%;
+    /* Take up full width of parent container */
+    padding-left: 0;
+}
+
+.info-item strong {
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.info-item .field-text {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    justify-self: start;
+}
+
+.info-item .address-text {
+    min-width: 0;
+    max-width: 100%;
+    display: block;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    justify-self: start;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    background: #202020;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #898989;
+    transform: scale(1.05);
+}
+
+.btn-edit-profile {
+    background: #dc3545;
+}
+
+.btn-edit-profile:hover {
+    background: #b02a37;
+}
+
+.btn-logout {
+    background: #0d6efd;
+}
+
+.btn-logout:hover {
+    background: #0b5ed7;
+}
+
+.btn-manage-address {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: #121212;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 0;
+    margin-top: 0;
+    grid-column: 2;
+    max-width: 100%;
+    box-sizing: border-box;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-manage-address:hover {
+    background: #5a6268;
+    color: #fff;
+}
+
+#password-popup {
+    position: fixed;
+    top: 0;
+}
+
+#password-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 128, 128, 0.6);
+    /* grey transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+#popup-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+#popup-box h3 {
+    font-size: 20px;
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.input-password {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.input-password:focus {
+    border-color: #6c757d;
+    /* Dark grey */
+    outline: none;
+    background-color: #fff;
+}
+
+.button-password {
+    width: 100%;
+    padding: 12px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-password:hover {
+    background-color: #495057;
+    transform: translateY(-2px);
+}
+
+.button-password:active {
+    background-color: #343a40;
+    transform: translateY(0);
+}
+
+.manage-address {
+    color: #FFFFFF;
+}
+
+.manage-address:hover {
+    color: #474747;
+}

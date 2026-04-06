@@ -1,0 +1,152 @@
+.container {
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    width: 90%;             /* mobile-friendly */
+    max-width: 500px;       /* same as your old width */
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgb(185, 185, 185);
+    margin-left: 30%;
+    padding: 1cm;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+}
+
+/* 表单的左右 margin */
+form {
+    margin: 0 1.5rem; /* 缩小左右 margin */
+    height: auto;
+}
+
+/* 表单标题样式 */
+.form-title {
+    font-size: 1.6rem; /* 缩小标题字体 */
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+/* 输入框的基本样式 */
+input {
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575;
+    padding-left: 1rem;
+    font-size: 14px; /* 缩小字体 */
+}
+
+/* 标签样式 */
+label {
+    color: #757575;
+    position: relative;
+    left: 1em; /* 缩小位置 */
+    top: -1em;
+    cursor: auto;
+}
+
+.links {
+    display: flex;
+    font-weight: bold;
+}
+
+/* .submit-btn 样式 */
+.submit-btn {
+    padding: 11px; /* 缩小内边距 */
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px; /* 缩小圆角 */
+    font-size: 14px; /* 缩小字体 */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* 调整按钮宽度 */
+    margin-top: 8px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); /* 居中 */
+}
+
+/* .submit-btn 鼠标悬停效果 */
+.submit-btn:hover {
+    background-color: #919191;
+}
+
+/* .input-group 样式 */
+.input-group, .input-group1, .input-group2, .input-group3, .input-group4, .input-group5, .input-group10 {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 6px; /* 缩小内边距 */
+    border-radius: 4px; /* 缩小圆角 */
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group i, 
+.input-group1 i, 
+.input-group2 i, 
+.input-group3 i, 
+.input-group4 i, 
+.input-group5 i,
+.input-group10 i {
+    font-size: 14px; /* 缩小图标 */
+    color: #555;
+    margin-right: 6px; /* 缩小间隙 */
+}
+
+.input-group input,
+.input-group1 input,
+.input-group2 input,
+.input-group3 input,
+.input-group4 input,
+.input-group5 input,
+.input-group10 input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 12px; /* 缩小输入框字体 */
+    padding: 4px; /* 缩小内边距 */
+}
+
+/* 下拉框样式 */
+.input-group10 select {
+    width: 100%;
+    padding: 6px; /* 缩小内边距 */
+    border: none;
+    outline: none;
+    font-size: 12px; /* 缩小字体 */
+    background-color: #fff;
+    border-radius: 4px; /* 缩小圆角 */
+}
+
+#errorMessages {
+    color: blue;
+    font-size: 12px; /* 错误信息字体 */
+    line-height: 1; /* or even 1.5 */
+}
+
+.g-recaptcha {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* ===== 新增头像上传样式 ===== */
+label.upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+label.upload img {
+    width: 120px;          /* 限制宽度 */
+    height: 120px;         /* 限制高度 */
+    object-fit: cover;     /* 保持比例裁剪 */
+    border-radius: 50%;    /* 圆形头像 */
+    border: 2px solid #ccc; /* 可选边框 */
+    margin-top: 6px;
+}

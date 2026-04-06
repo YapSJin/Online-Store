@@ -1,0 +1,133 @@
+.container {
+    width: 50%;
+    margin: 50px auto;
+}
+
+.address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.address-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.default-address {
+    border: 2px solid rgb(75, 75, 75);
+    background-color: #f1f1f1;
+}
+
+.btn-add, .btn-default, .btn-edit, .btn-delete,#formSubmit {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.btn-default, .btn-delete, .btn-edit ,#formSubmit{
+    background-color: rgb(133, 133, 133);
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+}
+
+.btn-default:hover, .btn-delete:hover, .btn-edit:hover {
+    background-color: rgb(96, 96, 96);
+}
+
+/* Add button */
+button.btn-add {
+    padding: 12px 20px;
+    background: #5c5c5c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-add:hover {
+    background: #8a8a8a;
+}
+
+.address-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.form-container {
+    display: block; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    background: white;
+    text-align: left;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+    max-width: 600px;
+}
+
+.form-content {
+    position: relative;
+    display: block;
+}
+
+.form-container input[type="text"]{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="text"]:focus{
+    border-color: #070707;
+    outline: none;
+}
+
+.form-button {
+    display: inline-block;
+}
+
+#addForm{
+    display: none;
+}
+
+#formTitle{
+    font-size: 25px;
+}
+
+.form-container select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.form-container select:focus {
+    border-color: #070707;
+    outline: none;
+}
+

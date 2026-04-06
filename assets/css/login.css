@@ -1,0 +1,66 @@
+.submit-btn {
+    padding: 10px 42px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    bottom: 80px;
+    left: 28%;
+    transform: translateX(-50%);
+}
+
+.submit-btn:hover {
+    background-color: #777777;
+}
+
+.container {
+    margin-top: 100px;
+    background: #fff;
+    width: 550px;
+    padding: 1.5rem;
+    margin: 150px auto;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgb(185, 185, 185);
+    position: relative;
+    height: 300px;
+}
+
+
+.form-control {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 400px;
+    min-width: 400px;
+}
+
+.form-title {
+    color: rgb(3, 3, 3);
+}
+
+.Password {
+    color: rgb(54, 54, 66);
+    font-size: 12px;
+    margin-left: 200px;
+    margin-top: 30px;
+
+}
+
+.links {
+    position: absolute;
+    bottom: 30px;
+    left: 30%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    text-align: left;
+}
+
+
+.rowcenter {
+    text-align: center;
+
+}

@@ -1,0 +1,165 @@
+/* home.css - 只针对 home 页面 */
+body {
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#fafafa;
+}
+
+/* HERO SECTION */
+.hero {
+    height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1 {
+    font-size:56px;
+}
+
+.hero p {
+    font-size:20px;
+    margin:20px 0;
+}
+
+.btn {
+    padding:12px 28px;
+    background:#28a745;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    margin:5px;
+}
+
+.btn:hover {
+    background:#218838;
+}
+
+/* PROMO SECTION */
+.promo {
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.promo h2 {
+    font-size:40px;
+}
+
+/* CATEGORIES */
+.categories {
+    padding:60px 20px;
+    background:#f5f5f5;
+    text-align:center;
+}
+
+.category-container {
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.category-card {
+    background:white;
+    width:260px;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 5px 12px rgba(0,0,0,0.1);
+    text-decoration:none;
+    color:black;
+    transition:0.3s;
+}
+
+.category-card:hover {
+    transform:translateY(-8px) scale(1.05);
+}
+
+.category-card i {
+    font-size:50px;
+    color:#28a745;
+    margin-bottom:10px;
+}
+
+/* FEATURES SECTION */
+.features {
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:60px 20px;
+    flex-wrap:wrap;
+}
+
+.feature-card {
+    background:white;
+    width:260px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.feature-card img {
+    width:80px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    padding:70px 20px;
+    text-align:center;
+    background:#fafafa;
+}
+
+.testimonial-container {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.testimonial {
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 12px rgba(0,0,0,0.1);
+}
+
+/* ABOUT SECTION */
+.about {
+    background:white;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.about p {
+    max-width:700px;
+    margin:auto;
+    color:#555;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+footer {
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.social a {
+    color:white;
+    font-size:22px;
+    margin:0 10px;
+}
+
+/* EMOJI */
+.emoji {
+    font-size:50px;
+    margin-bottom:10px;
+    display:block;
+}

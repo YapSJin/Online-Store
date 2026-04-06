@@ -1,0 +1,83 @@
+/* header.css */
+header {
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo-link {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+}
+
+.logo {
+    height:60px;
+}
+
+.brand-name {
+    font-size:28px;
+    font-weight:bold;
+    color:white;
+}
+
+.nav-desktop {
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.nav-links a {
+    color:white;
+    margin:0 12px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.nav-links a:hover {
+    color:#28a745;
+}
+
+.user-name-link {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.user-name-link:hover {
+    text-decoration: underline;
+}
+
+.auth-buttons a {
+    margin-left:10px;
+    padding:8px 14px;
+    border-radius:6px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.login-btn {
+    background:#28a745;
+    color:white;
+}
+
+.register-btn {
+    background:#007bff;
+    color:white;
+}
+
+.login-btn:hover {
+    background:#218838;
+}
+
+.register-btn:hover {
+    background:#0069d9;
+}
